@@ -1,5 +1,5 @@
 var {Sequelize, DataTypes} = require('sequelize');
-const { sequelize } = require('./Genre');
+const { sequelize } = require('./Videogame');
 
 module.exports = (sequelize) => {
     // defino el modelo

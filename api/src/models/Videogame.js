@@ -9,7 +9,7 @@ module.exports = (sequelize) => {
     Descripcion: {type: DataTypes.TEXT, allowNull: false},
     Lanzamiento: {type: DataTypes.STRING},
     Rating: {type: DataTypes.STRING},
-    Consolas: {type: DataTypes.STRING},
+    Consola: {type: DataTypes.STRING},
     Imagen: {type: DataTypes.TEXT},
     Creado: {type: DataTypes.BOOLEAN, defaultvalue: false}
   },

@@ -3,7 +3,7 @@ const { sequelize } = require('./Videogame');
 
 module.exports = (sequelize) => {
     // defino el modelo
-    sequelize.define("genre",
+    sequelize.define("Genero",
       { Genero: { type: DataTypes.STRING, allowNull: false },
       },
       { timestamps: false }

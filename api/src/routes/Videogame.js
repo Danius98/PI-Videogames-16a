@@ -1,6 +1,6 @@
 const axios = require('axios');
 const { Router } = require('express');
-const { Videogame, Genre } = require('../db');
+const { Videogame, Genero } = require('../db');
 const router = Router();
 const APIKEY = "f648fbbe7d024a9d9b021bbd24cea8b5"
 const GAMES = `https://api.rawg.io/api/games?key=${APIKEY}`
@@ -21,10 +21,16 @@ router.get('/', async function AllGames(req, res, next) {
                 Titulo: e.name,
                 Imagen: e.background_image,
                 Lanzamiento: e.released,
-                Generos: e.genres,
+                Rating: e.rating,
+                Generos: e.genres.map((e) => {
+                    return {
+                    Genero: e.name,
+                  };
+              }),
                 Consolas: e.platforms.map((e) => {
                     return e.platform.name
                 }),
+                Creado: false,
             };
             return All_games
         })
@@ -33,11 +39,11 @@ router.get('/', async function AllGames(req, res, next) {
         }
         const GameDB = await Videogame.findAll({
             include: {
-                model: Genre,
-                /*attributes: ["Consola"],
+                model: Genero,
+                attributes: ["Genero"],
                 through: {
                     attributes: [],
-                },*/
+                },
             },
         });
         console.log(GameDB)
@@ -73,11 +79,16 @@ router.get('/:id', async function GamesID(req, res) {
                     Imagen: GTA.data.background_image,
                     Descripcion: GTA.data.description,
                     Lanzamiento: GTA.data.released,
-                    Rating: GTA.data.metacritic,
-                    Generos: GTA.data.genres,
+                    Rating: GTA.data.rating,
+                    Generos: GTA.data.genres.map((e) => {
+                        return {
+                            Genero: e.name
+                        }
+                    }),
                     Consolas: GTA.data.platforms.map((e) => {
                     return e.platform.name
                 }),
+                    Creado: false,
                 };
                 return res.json(obj)
             } catch(error) {
@@ -87,7 +98,11 @@ router.get('/:id', async function GamesID(req, res) {
             try {
                 let query = await Videogame.findByPk(id, {
                     include: {
-                        model: Genre
+                        model: Genero,
+                        attributes: ["Genero"],
+                        through: {
+                        attributes: [],
+                     },
                     }
                 });
                 res.json(query);
@@ -98,8 +113,8 @@ router.get('/:id', async function GamesID(req, res) {
     }
 });
 
-router.post('/', async function createPoke(req, res) {
-    const { Titulo, Descripcion, Lanzamiento, Rating, Consola, Imagen, genreId} = req.body;
+router.post('/', async function createGame (req, res) {
+    const { Titulo, Descripcion, Lanzamiento, Rating, Consolas, Imagen, GeneroId} = req.body;
     try {
     const Val_Game = await Videogame.findOne({
         where: {
@@ -112,25 +127,24 @@ router.post('/', async function createPoke(req, res) {
             Descripcion: Descripcion,
             Lanzamiento: Lanzamiento,
             Rating: Rating,
-            Velocidad: Velocidad,
-            Consola: Consola,
+            Consolas: Consolas,
             Imagen: Imagen,
             Creado: true
         });
-        const GameID = await Genre.findAll({
+        const GameID = await Genero.findAll({
            where: {
-               id: genreId
+               id: GeneroId,
            },
         });
-        const show_Game = await new_Game.addType(GameID);
+        const show_Game = await new_Game.addGenero(GameID);
         return res.send(show_Game);
     } 
-    const GameID = await Genre.findAll({
+    const GameID = await Genero.findAll({
         where: {
-            id: genreId,
+            id: GeneroId,
         },
     });
-    const show_Game = await Val_Game.addType(GameID);
+    const show_Game = await Val_Game.addGenero(GameID);
     res.send(show_Game)
    } catch(error) {
         res.status(500).json(error);

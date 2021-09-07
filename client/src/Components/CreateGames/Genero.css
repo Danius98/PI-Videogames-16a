@@ -1,0 +1,14 @@
+.container {
+    display: flex;
+    flex-direction: row;
+    background-color: #4d4a4a;
+    color: rgb(238, 226, 226);
+    box-shadow: black;
+    width:98%;
+    justify-content: space-around;
+    border-radius: 2rem;
+}
+
+.text {
+    color: black;
+}

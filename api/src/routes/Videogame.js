@@ -66,6 +66,28 @@ router.get('/', async function AllGames(req, res, next) {
     }
 })
 
+router.get('/Consolas', async function(_req, res) {
+    try {
+        const GameApi = await axios.get(GAMES);
+        const result = GameApi.data.results;
+        const response = [];
+        result.forEach((e) => {
+            e.platforms.forEach((p) => {
+                const name = p.platform.name
+                if(!response.includes(name)){
+                    response.push(name)
+                    if(!response.includes('PlayStation 2')){
+                        response.push('PlayStation 2')
+                    }
+                }
+            })
+        })
+        res.send(response)
+    } catch(error) {
+        res.send(error)
+    }
+})
+
 router.get('/:id', async function GamesID(req, res) {
     const { id } = req.params;
     console.log(id)

@@ -1,4 +1,4 @@
-import './Generos.css'
+import './Genero.css'
 
 export default function Genero(props) {
     const { Genero } = props

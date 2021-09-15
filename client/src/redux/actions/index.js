@@ -2,6 +2,7 @@ import axios from 'axios';
 export const GET_VIDEOGAMES = "GET_VIDEOGAMES",
 GET_VIDEOGAME_NAME = "GET_VIDEOGAME_NAME",
 GET_VIDEOGAME_ID = "GET_VIDEOGAME_ID",
+GET_PLATFORMS = "GET_PLATFORMS",
 GET_GENEROS = "GET_GENEROS",
 NAME_ORDER_A = "NAME_ORDER_A",
 NAME_ORDER_Z = "NAME_ORDER_Z",
@@ -43,10 +44,21 @@ export function getVideogameID(ID) {
     }
 }
 
+export function getPlatforms() {
+    return async function(dispatch) {
+        try {
+            const json = await axios.get("http://localhost:3003/Videogame/Consolas");
+            return dispatch({ type: "GET_PLATFORMS", payload: json.data})
+        } catch(error) {
+            console.log("No se mostró la plataforma")
+        }
+    }
+}
+
 export function getGeneros() {
     return async function(dispatch) {
         try {
-            const json = await axios.get("http://localhost:3003/Generos");
+            const json = await axios.get("http://localhost:3003/Genre");
             return dispatch({ type: "GET_GENEROS", payload: json.data})
         } catch(error) {
             console.log("No se mostró el Genero")

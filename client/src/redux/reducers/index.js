@@ -2,6 +2,7 @@ import {
 GET_VIDEOGAMES,
 GET_VIDEOGAME_NAME,
 GET_VIDEOGAME_ID,
+GET_PLATFORMS,
 GET_GENEROS,
 NAME_ORDER_A,
 NAME_ORDER_Z,
@@ -24,15 +25,18 @@ const Title_Order = (a, b) => {
 
 const initialState = {
     Videogames: [],
+    ExactGame: [],
     GameInfo: [],
-    Generos: []
+    Generos: [],
+    Consolas: {}
 }
 
 function rootReducer(state = initialState, action) {
     if(action.type === GET_VIDEOGAMES) {
         return {
             ...state,
-            Videogames: action.payload
+            Videogames: action.payload,
+            ExactGame: action.payload
         };
     }
     if(action.type === GET_VIDEOGAME_NAME) {
@@ -46,6 +50,12 @@ function rootReducer(state = initialState, action) {
             ...state,
             GameInfo: action.payload
         }
+    }
+    if(action.type === GET_PLATFORMS) {
+        return {
+            ...state,
+            Consolas: action.payload
+        };
     }
     if(action.type === GET_GENEROS) {
         return {
@@ -67,7 +77,9 @@ function rootReducer(state = initialState, action) {
     };
     if(action.type === GENERO) {
         const allGames = state.Videogames
-        const typeFilter = action.payload === "allGenre" ? allGames
+        const typeFilter = 
+        action.payload === "allGenre" 
+        ? allGames
         : allGames.filter(({Generos}) => {
                 return Generos.find(({Genero}) => Genero === action.payload)}
                  )
@@ -77,10 +89,10 @@ function rootReducer(state = initialState, action) {
                  }
     };
     if(action.type === CREATED) {
-        const Existe = state.Videogames
+        const Existe = state.ExactGame
         let createdFilter;
-        if(action.payload === "Todos") {
-            createdFilter = Existe.filter((e) => e.Creado === true && e.Creado === false);
+        if(action.payload === "Todo") {
+            createdFilter = Existe
         }
         if(action.payload === "true") {
             createdFilter = Existe.filter((e) => e.Creado === true)

@@ -11,24 +11,20 @@ const NavBar = ({getVideoGame, Name_OrderA, Name_OrderZ, Genre, Created, Game_Rt
     const[Creado, setCreado] = useState('');
     const dispatch = useDispatch();
     useEffect(() => {
-        if(Genero) {
-            getVideoGame();
-            if(Genero !== "allGenre") {
+            if(Genero === "allGenre") {
+                getVideoGame()
+            }else{
                 setTimeout(() => {
                     dispatch(Genre(Genero))
-                }, 50)
+                }, 1000)
             }
-        }
     }, [Genero, getVideoGame, dispatch]);
     useEffect(() => {
         if(Creado) {
-            getVideoGame();
-            if(Creado !== "Todos") {
                 setTimeout(() => {
                     dispatch(Created(Creado))
-                }, 50)
+                }, 1000)
             }
-        }
     }, [Creado, getVideoGame, dispatch]);
     useEffect(() => {
         if(Order === "Todos") getVideoGame();
@@ -59,7 +55,7 @@ const NavBar = ({getVideoGame, Name_OrderA, Name_OrderZ, Genre, Created, Game_Rt
                     <h5>Filtrado por Creado</h5>
                     <div>
                         <select onChange={(event) => setCreado(event.target.value)}>
-                        <option value="Todos">Todos</option>
+                        <option value="Todo">Todos</option>
                           <option value="false">Existente</option>
                           <option value="true">Creado</option>
                         </select>                   
@@ -69,7 +65,7 @@ const NavBar = ({getVideoGame, Name_OrderA, Name_OrderZ, Genre, Created, Game_Rt
                     <h5>Filtrado por Tipo</h5>
                     <div>
                         <select onChange={(event) => setGenre(event.target.value)}>
-                          <option value="Todos">Todos</option>
+                          <option value="allGenre">Todos</option>
                           <option value="Action">Action</option>
                           <option value="RPG">RPG</option>
                           <option value="Indie">Indie</option>

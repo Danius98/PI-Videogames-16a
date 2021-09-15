@@ -3,7 +3,6 @@ import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { useParams } from "react-router";
 import { getVideogameID } from '../../redux/actions/index.js';
-//import  Activity  from '../Countries/ActivityDetail.jsx';
 import "./GamesDetail.css"
 
 export default function GameID() {
@@ -14,7 +13,7 @@ export default function GameID() {
         dispatch(getVideogameID(idGame));
     }, [dispatch, idGame]);
     console.log(idGame, `${idGame}`)
-    console.log(GameDetailed, "Detalle del Pokemon")
+    console.log(GameDetailed, "Detalle del Videojuego")
     //console.log(PokeDetailed.types.map((e) => e.Tipo))
     return (
         <div className="all">
@@ -24,7 +23,7 @@ export default function GameID() {
             <div className="container">
               <h1>{GameDetailed.Titulo}</h1>
               <div className="imgcontainer">
-                  <img src={GameDetailed.Imagen} alt="No se encontró el Pokemon"/>
+                  <img src={GameDetailed.Imagen} alt="No se encontró el Videojuego"/>
               </div>
               <div className="table">
                  {/*<h3>Titulo: {GameDetailed.Titulo}</h3>

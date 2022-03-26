@@ -8,11 +8,11 @@ import "./GamesDetail.css"
 export default function GameID() {
     const GameDetailed = useSelector((state) => state.GameInfo)
     const dispatch = useDispatch();
-    const {idGame} = useParams();
+    const {idCosa} = useParams();
     useEffect(() => {
-        dispatch(getVideogameID(idGame));
-    }, [dispatch, idGame]);
-    console.log(idGame, `${idGame}`)
+        dispatch(getVideogameID(idCosa));
+    }, [dispatch, idCosa]);
+    console.log(idCosa, `${idCosa}`)
     console.log(GameDetailed, "Detalle del Videojuego")
     //console.log(PokeDetailed.types.map((e) => e.Tipo))
     return (
@@ -38,3 +38,12 @@ export default function GameID() {
         </div>
     )
 }
+
+/*Name
+Gender
+Race
+Height
+Weight
+Eye Color 
+Hair Color*/
+

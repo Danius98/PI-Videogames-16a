@@ -26,6 +26,7 @@ export function getVideoGameName(Titulo) {
     return async function(dispatch) {
         try {
             const json = await axios.get("http://localhost:3003/Videogame?Titulo=" + Titulo);
+            console.log(json)
             return dispatch({ type: "GET_VIDEOGAME_NAME", payload: json.data})
         } catch(error) {
             console.log("No se mostró el Juego")
@@ -116,3 +117,21 @@ export function Game_Rtn_Min() {
         type: GAME_RTN_MIN,
     }
 }
+
+/*export function Get_heroes(cantidad) {
+    return function(dispatch) {
+        const requests = Array.from({length: cantidad}, (_, i) => 
+        fetch(`https://www.superheroapi.com/api.php/${token}/${i+1}`));
+        Promise.all(requests)
+        .then(response => {
+            let hero = []; 
+            response.map((e) => e.json()
+            .then(json => {
+                hero.push(json)
+                if(hero.length === cantidad) {
+                    return dispatch ({type: GET_HEROES, payload: hero})
+                }
+            }))
+        })
+    }
+}*/

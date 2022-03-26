@@ -11,7 +11,7 @@ function App() {
     <div className="App">
       <Route exact path="/" component={Landing}/>
       <Route exact path="/Videogame" component={Home}/>
-      <Route path="/Videogame/:idGame" component={GamesDetail}/>
+      <Route path="/Videogame/:idCosa" component={GamesDetail}/>
       <Route path="/Videogame/Create" component={Games}/>
     </div>
   );

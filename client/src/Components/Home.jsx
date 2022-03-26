@@ -11,10 +11,11 @@ export default function Home() {
     }, [dispatch])
     return (
         <div>
+            <h2>Hola a todos</h2>
             <NavBar/>
             <div>
-                <Videogames/>
-            </div>
+                {/*<Videogames/>*/}
+            </div>/
         </div>
     )
 }

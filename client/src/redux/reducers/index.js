@@ -76,7 +76,7 @@ function rootReducer(state = initialState, action) {
         }
     };
     if(action.type === GENERO) {
-        const allGames = state.Videogames
+        const allGames = state.ExactGame
         const typeFilter = 
         action.payload === "allGenre" 
         ? allGames

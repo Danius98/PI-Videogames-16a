@@ -1,0 +1,237 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-align: center;
+    overflow: hidden;
+}
+
+body{
+    background: url(../../img/Gaming_bg.png);
+}
+
+.svg{
+    height: 600px;
+    width: 600px;
+    transform: translateY(45%);
+}
+
+.svg:hover{
+    animation: animate 0.5s forwards;
+}
+
+.svg:not(:hover){
+    animation: undo 0.5s forwards;
+}
+
+/* ------- Crosses ------*/
+#Vector_15, #Vector_16, #Vector_17, #Vector_18, #Buttons{
+    cursor: pointer;
+}
+
+/* ----- Left Cross ----- */
+/* --- Arrows --- */
+#Vector_15:hover, #Vector_16:hover, #Vector_17:hover, #Vector_18:hover{
+    transform: scale(1.005);
+}
+
+/*Left*/
+#Vector_15:hover+#Polygon_81{
+    fill: pink;
+}
+
+/*Down*/
+#Vector_16:hover+#Polygon_80{
+    fill: blue;
+    opacity: 0.5;
+}
+
+/*Right*/
+#Vector_17:hover+#Polygon_79{
+    fill: red;
+    opacity: 0.5;
+}
+
+/*Up*/
+#Vector_18:hover+#Polygon_82{
+    fill: green;
+}
+/* ----- Right Cross ----- */
+/* --- Botones --- */
+
+#Cross:hover, #Circle:hover, #Triangle:hover, #Square:hover{
+    transform: scale(1.0025);
+}
+
+/*Cross*/
+#Cross:hover #x{
+    fill: blue;
+    opacity: 0.5;
+}
+
+
+/*Circle*/
+#Circle:hover #Vector_11{
+    fill: red;
+    opacity: 0.5;
+}
+
+/*Triangle*/
+#Triangle:hover #Polygon_1{
+    fill: green;
+} 
+
+/*Square*/
+#Square:hover #Rectangle_78{
+    fill: pink;
+}
+
+/* ----- Wifi ----- */
+
+#Wifi{
+    opacity: 0;
+}
+
+.svg:hover #Wifi{
+    animation: wifi 1s 1s infinite forwards;   
+}
+
+.svg:hover #Inner_Wifi{
+    animation: inner 2s 1s infinite forwards;
+}
+
+.svg:hover #Vector_9{
+    animation: middle 2s 1s infinite forwards;
+}
+
+.svg:hover #Vector_8{
+    animation: outer 2s 1s infinite forwards;
+    animation: name duration timing-function delay iteration-count direction fill-mode;
+}
+
+
+@keyframes animate{
+    to{
+    transform: translateY(2%);
+    }
+}
+
+@keyframes undo{
+    from{
+        transform: unset;
+    }
+    to{
+        transform: translateY(45%);
+    }
+}
+
+@keyframes wifi{
+    from{
+       opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+@keyframes inner{
+    0%{
+        fill: rgb(11, 12, 13);
+        opacity: 0.5;
+
+    }
+    25%{
+        fill: red;
+        opacity: 1;
+    }
+    50%{
+        fill: yellow;
+    }
+    75%{
+        fill: green;
+    }
+    100%{
+        transform: unset;
+    }
+}
+
+@keyframes middle{
+    0%{
+        fill: rgb(11, 12, 13);
+        opacity: 0;
+    }
+    25%{
+        fill: rgb(11, 12, 13);
+        opacity: 0.5;
+    }
+    50%{
+        fill: yellow;
+        opacity: 1;
+    }
+    75%{
+        fill: green;
+    }
+    100%{
+        transform: unset;
+    }
+}
+
+@keyframes outer{
+    0%{
+        fill: rgb(11, 12, 13);
+        opacity: 0;
+    }
+    25%{
+        fill: rgb(11, 12, 13);
+        opacity: 0;
+    }
+    50%{
+        fill: rgb(11, 12, 13);
+        opacity: 0.5;
+    }
+    75%{
+        fill: green;
+        opacity: 1;
+    }
+    100%{
+        transform: unset;
+    }
+}
+
+/*----- Background -----*/
+
+.bg{
+    background: url(../../img/Dark_bg.png);
+}
+
+.top{
+    height: 10%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.right{
+    width: 10%;
+    position: fixed;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+.bottom{
+    height: 10%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.left{
+    width: 10%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+}

@@ -1,3 +1,4 @@
+@import url("https://www.fontspace.com/category/playstation");
 *{
     margin: 0;
     padding: 0;
@@ -210,6 +211,7 @@ body{
     top: 0;
     left: 0;
     right: 0;
+    z-index: 1;
 }
 
 .right{
@@ -218,6 +220,7 @@ body{
     right: 0;
     top: 0;
     bottom: 0;
+    z-index: 0;
 }
 
 .bottom{
@@ -234,4 +237,12 @@ body{
     left: 0;
     top: 0;
     bottom: 0;
+    z-index: 0;
+}
+
+.text{
+    text-align: center;
+    font-size: 35px;
+    color: white;
+    font-variant: small-caps;
 }

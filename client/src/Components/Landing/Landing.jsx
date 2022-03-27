@@ -299,9 +299,12 @@ return (
         </defs>
         </svg>
         <div class="bg">
-        <div class="bg top"></div>
+        <div class="bg top">
+        <div class="text">Hover the cursor over the control and press any button to continue</div>
+        </div>
         <div class="bg right"></div>
-        <div class="bg bottom"></div>
+        <div class="bg bottom">
+        </div>
         <div class="bg left"></div>
         <div class="bg middle"></div>
     </div>

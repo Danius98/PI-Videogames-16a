@@ -14,7 +14,7 @@ export default function Home() {
             <h2>Hola a todos</h2>
             <NavBar/>
             <div>
-                {/*<Videogames/>*/}
+                {<Videogames/>}
             </div>/
         </div>
     )

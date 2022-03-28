@@ -1,4 +1,8 @@
-@import url("https://www.fontspace.com/category/playstation");
+@font-face{
+    font-family: Gamestation-CondensedOblique;
+    src: url('../../font/GamestationCondensedoblique-j34j.otf') format('opentype');
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -9,6 +13,7 @@
 
 body{
     background: url(../../img/Gaming_bg.png);
+    font-family: Gamestation-CondensedOblique;
 }
 
 .svg{

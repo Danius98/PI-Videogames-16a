@@ -30,6 +30,15 @@ body{
     animation: undo 0.5s forwards;
 }
 
+/* ----- Control ----- */
+#Select, #Start{
+    cursor: pointer;
+}
+
+#Select:hover, #Start:hover{
+    transform: scale(1.005);
+}
+
 /* ------- Crosses ------*/
 #Vector_15, #Vector_16, #Vector_17, #Vector_18, #Buttons{
     cursor: pointer;

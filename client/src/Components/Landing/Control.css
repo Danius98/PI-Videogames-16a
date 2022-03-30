@@ -260,3 +260,12 @@ body{
     color: white;
     font-variant: small-caps;
 }
+
+.start, .select{
+    height: 30px;
+    width: 30px;
+    position: relative;
+    top: 5px;
+    left: 5px;
+    right: 5px;
+}

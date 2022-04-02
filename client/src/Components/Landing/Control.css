@@ -35,8 +35,12 @@ body{
     cursor: pointer;
 }
 
-#Select:hover, #Start:hover{
+#Start:hover{
     transform: scale(1.005);
+}
+
+#Select:hover{
+    transform: scale(2.5);
 }
 
 /* ------- Crosses ------*/
@@ -57,8 +61,7 @@ body{
 
 /*Down*/
 #Vector_16:hover+#Polygon_80{
-    fill: blue;
-    opacity: 0.5;
+    fill: rgb(0, 68, 255);
 }
 
 /*Right*/
@@ -80,8 +83,7 @@ body{
 
 /*Cross*/
 #Cross:hover #x{
-    fill: blue;
-    opacity: 0.5;
+    fill: rgb(0, 68, 255);
 }
 
 

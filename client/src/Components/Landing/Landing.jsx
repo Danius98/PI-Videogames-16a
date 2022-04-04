@@ -14,7 +14,7 @@ return (
         <g id="Control">
         <path id="Vector" d="M237.719 224.579C236.619 225.679 235.719 227.479 235.719 228.479C235.719 230.879 239.319 233.579 242.419 233.579C245.019 233.579 248.719 230.379 248.719 228.079C248.719 225.779 245.019 222.579 242.219 222.579C240.819 222.579 238.819 223.479 237.719 224.579Z" fill="black" fill-opacity="0.85"/>
         <foreignObject x="159" y="256" width="100px" height="100px">
-        <label>
+        <label for="check">
         <svg width="18" height="8" viewBox="0 0 18 8" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path id="Select" d="M0.71875 4.07847V7.67847L9.01875 7.37847L17.2188 7.07847L17.5188 3.77847L17.8188 0.578467H9.31875H0.71875V4.07847Z" fill="black" fill-opacity="0.85"/>
         </svg>
@@ -323,6 +323,13 @@ return (
         </div>
         <div class="bg left"></div>
         <div class="bg middle"></div>
+    </div>
+    <input type="checkbox" id="check" class="info__checkbox"/>
+    <div class="info">
+    <b>Press triangle for Linkedin</b>
+    <b>Press cross for Github</b>
+    <b>Press circle to skip to create your own game!</b>
+    <b>Press square to see my portfolio</b>
     </div>
     </main>
 )

@@ -8,12 +8,12 @@
     padding: 0;
     box-sizing: border-box;
     text-align: center;
-    overflow: hidden;
 }
 
 body{
     background: url(../../img/Gaming_bg.png);
     font-family: Gamestation-CondensedOblique;
+    overflow: hidden;
 }
 
 .svg{
@@ -221,6 +221,7 @@ body{
     background: url(../../img/Dark_bg.png);
 }
 
+/*--- top ---*/
 .top{
     height: 10%;
     position: fixed;
@@ -230,6 +231,25 @@ body{
     z-index: 1;
 }
 
+/*--- top svg ---*/
+.start, .select{
+    height: 30px;
+    width: 30px;
+    position: relative;
+    top: 5px;
+    left: 5px;
+    right: 5px;
+}
+
+/*--- top text ---*/
+.text{
+    text-align: center;
+    font-size: 35px;
+    color: white;
+    font-variant: small-caps;
+}
+
+/*--- right bg ---*/ 
 .right{
     width: 10%;
     position: fixed;
@@ -239,6 +259,7 @@ body{
     z-index: 0;
 }
 
+/*--- bottom bg ---*/
 .bottom{
     height: 10%;
     position: fixed;
@@ -247,6 +268,7 @@ body{
     right: 0;
 }
 
+/*--- left bg ---*/
 .left{
     width: 10%;
     position: fixed;
@@ -256,18 +278,30 @@ body{
     z-index: 0;
 }
 
-.text{
-    text-align: center;
-    font-size: 35px;
-    color: white;
-    font-variant: small-caps;
+/*----- Menu -----*/
+.menu__checkbox{
+    display: none;
 }
 
-.start, .select{
-    height: 30px;
-    width: 30px;
-    position: relative;
-    top: 5px;
-    left: 5px;
-    right: 5px;
+.info__checkbox:checked ~ .info{
+    transform: unset;
 }
+
+.info{
+    position: fixed;
+    top: 10%;
+    right: 0;
+    /* background: url(../../img/Dark_bg.png); */
+    background: gray;
+    height: 40%;
+    width: 40%;
+    max-width: 350px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    transform: translate(100%);
+    transition: .4s transform;
+}
+
+

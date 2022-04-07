@@ -7,12 +7,15 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    text-align: center;
 }
 
 body{
     background: url(../../img/Gaming_bg.png);
     font-family: Gamestation-CondensedOblique;
+}
+
+.control{
+    text-align: center;
     overflow: hidden;
 }
 
@@ -222,7 +225,7 @@ body{
 }
 
 /*--- top ---*/
-.top{
+.top__bg{
     height: 10%;
     position: fixed;
     top: 0;
@@ -250,7 +253,7 @@ body{
 }
 
 /*--- right bg ---*/ 
-.right{
+.right__bg{
     width: 10%;
     position: fixed;
     right: 0;
@@ -260,7 +263,7 @@ body{
 }
 
 /*--- bottom bg ---*/
-.bottom{
+.bottom__bg{
     height: 10%;
     position: fixed;
     bottom: 0;
@@ -269,7 +272,7 @@ body{
 }
 
 /*--- left bg ---*/
-.left{
+.left__bg{
     width: 10%;
     position: fixed;
     left: 0;
@@ -291,8 +294,8 @@ body{
     position: fixed;
     top: 10%;
     right: 0;
-    /* background: url(../../img/Dark_bg.png); */
-    background: gray;
+    background: url(../../img/Menu_bg.png); 
+    /*background: gray;*/
     height: 40%;
     width: 40%;
     max-width: 350px;
@@ -302,6 +305,35 @@ body{
     justify-content: space-evenly;
     transform: translate(100%);
     transition: .4s transform;
+    color: white;
+    padding: 5px;
+    overflow: hidden;
 }
 
+.info--text{
+    display: flex;
+    justify-content: flex-end;
+}
 
+.info__title{
+    margin: 0 auto;
+}
+
+.triangle, .circle, .cross, .square, .up, .right, .down, .left{
+    height: 20px;
+    width: 20px;
+    position: relative;
+    top: 5px;
+    left: 1px;
+    right: 1px;
+}
+
+#Up, #Right, #Left, #Down{
+    fill: gray;
+}
+
+/*.info{
+position: relative;
+/* left: -8px; 
+font-size: 14.8px;
+}*/

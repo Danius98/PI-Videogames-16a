@@ -9,6 +9,7 @@ return (
       {/*<button className="card">
              <Link className="Zelda" to="/Videogame"><h1>Bienvenido, ¡Suerte en tu Juego!</h1></Link>
 </button>*/}
+      <div class="control">
       <svg class="svg" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
         <g id="PS4">
         <g id="Control">
@@ -306,29 +307,54 @@ return (
         </filter>
         </defs>
         </svg>
+        </div>
         <div class="bg">
-        <div class="bg top">
-        <div class="text">Hover the cursor over the control. Press start
-        
+        <div class="bg top__bg">
+        <div class="text">Hover the cursor over the control. Press start      
 <svg class="start" width="16" height="8" viewBox="0 0 16 8" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path id="start" d="M0.71875 4.07863C0.71875 8.07863 0.91875 8.17863 9.11875 5.87863L15.2188 4.17863L9.71875 2.47863C1.51875 -0.121373 0.71875 -0.0213728 0.71875 4.07863Z" fill="gray" fill-opacity="0.85"/>
 </svg> to main page. Press Select 
 <svg class="select" width="18" height="8" viewBox="0 0 18 8" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path id="select" d="M0.71875 4.07847V7.67847L9.01875 7.37847L17.2188 7.07847L17.5188 3.77847L17.8188 0.578467H9.31875H0.71875V4.07847Z" fill="gray" fill-opacity="0.85"/>
 </svg> for more info
-</div>
         </div>
-        <div class="bg right"></div>
-        <div class="bg bottom">
         </div>
-        <div class="bg left"></div>
-        <div class="bg middle"></div>
+        <div class="bg right__bg"></div>
+        <div class="bg bottom__bg"></div>
+        <div class="bg left__bg"></div>
+        <div class="bg middle__bg"></div>
     </div>
     <input type="checkbox" id="check" class="info__checkbox"/>
     <div class="info">
-    <b>Press triangle for Linkedin</b>
-    <b>Press cross for Github</b>
-    <b>Press circle to skip to create your own game!</b>
+    <h3 class="info__title">INFO</h3>
+    <b>Press triangle 
+<svg class="triangle" width="20" height="20" viewBox="0 0 36 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Triangle">
+<path id="Vector" d="M12.4191 0.978428C7.61906 2.77843 5.01906 5.07843 2.61906 9.77843C-4.38094 23.5784 9.81906 38.9784 24.4191 33.4784C28.2191 32.0784 32.7191 27.7784 34.3191 23.8784C40.0191 10.6784 26.0191 -3.92157 12.4191 0.978428Z" fill="black" fill-opacity="0.85"/>
+<path id="Polygon 1" d="M18.7188 2.57861L31.7091 25.0786H5.72837L18.7188 2.57861Z" fill="#E5E5E5"/>
+<path id="Polygon 2" d="M18.725 7L27.1471 22.3375H10.3029L18.725 7Z" fill="black" fill-opacity="0.85"/>
+</g>
+</svg> or Upper cross <svg class="up" width="26" height="32" viewBox="0 0 26 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path id="Up" d="M2.81849 1.67861C0.618492 2.57861 0.518492 2.87861 1.21849 9.87861C2.31849 21.4786 3.31849 24.0786 8.11849 28.0786C10.5185 29.9786 12.8185 31.5786 13.2185 31.5786C13.6185 31.5786 15.9185 29.9786 18.3185 28.0786C23.1185 24.1786 24.1185 21.4786 25.1185 10.3786C25.7185 4.27861 25.6185 3.57861 23.5185 2.17861C21.0185 0.378613 6.91849 -0.0213871 2.81849 1.67861Z" fill="black" fill-opacity="0.85"/>
+</svg> for Linkedin</b>
+    <b>Press circle <svg class="circle" width="36" height="35" viewBox="0 0 36 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Circle">
+<path id="Vector" d="M14.0183 0.578571C2.61832 3.27857 -2.78168 17.3786 3.81832 27.0786C12.8183 40.1786 33.7183 35.0786 35.4183 19.2786C36.7183 7.57857 25.5183 -2.22143 14.0183 0.578571Z" fill="black" fill-opacity="0.85"/>
+<path id="Vector_2" d="M14.8932 2.99103C5.14078 5.29917 0.521197 17.3528 6.16736 25.645C13.8667 36.8437 31.7462 32.4839 33.2005 18.977C34.3126 8.9751 24.7312 0.597404 14.8932 2.99103Z" fill="#E5E5E5"/>
+<circle id="Ellipse 7" cx="18.7188" cy="17.5786" r="12" fill="black" fill-opacity="0.85"/>
+</g>
+</svg> or Right cross  <svg class="right" width="32" height="26" viewBox="0 0 32 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path id="Right" d="M22.7188 1.17866C21.9188 1.27866 18.5188 1.77866 15.2188 2.07866C9.71875 2.67866 8.81875 3.17866 5.01875 7.27866C2.61875 9.77866 0.71875 12.2787 0.71875 12.8787C0.71875 13.3787 2.31875 15.7787 4.21875 18.1787C8.21875 22.9787 10.9187 24.0787 22.4188 25.1787C29.6187 25.7787 29.7188 25.7787 30.7188 23.1787C31.2188 21.6787 31.7188 16.9787 31.7188 12.7787C31.7188 2.07866 29.8188 -0.421337 22.7188 1.17866Z" fill="black" fill-opacity="0.85"/>
+</svg> for Github</b>
+    <b>Press cross <svg class="cross" width="35" height="35" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Cross">
+<path id="Vector" d="M13.0623 0.482378C1.66227 3.18238 -3.73774 17.2824 2.86226 26.9824C11.8623 40.0824 32.7623 34.9824 34.4623 19.1824C35.7623 7.48238 24.5623 -2.31762 13.0623 0.482378Z" fill="black" fill-opacity="0.85"/>
+<path id="x_x" d="M12.2734 6.86719L16.9023 14.5625L21.5898 6.86719H25.8281L18.9141 17.2969L26.043 28H21.8633L16.9805 20.0703L12.0977 28H7.89844L15.0078 17.2969L8.11328 6.86719H12.2734Z" fill="#E5E5E5"/>
+</g>
+</svg> or Down cross <svg class="down" width="26" height="32" viewBox="0 0 26 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path id="Down" d="M8.01883 4.17847C3.31883 8.07847 2.31883 10.7785 1.21883 22.2785C0.518832 29.4785 0.518832 29.5785 3.21883 30.5785C6.61883 31.8785 19.8188 31.8785 23.2188 30.5785C25.8188 29.5785 25.9188 29.2785 25.3188 24.2785C24.9188 21.4785 24.4188 16.7785 24.0188 14.0785C23.5188 9.77847 22.8188 8.47847 18.9188 4.77847C16.3188 2.47847 13.8188 0.578466 13.2188 0.578466C12.7188 0.578466 10.3188 2.17847 8.01883 4.17847Z" fill="black" fill-opacity="0.85"/>
+</svg>
+to skip to create your own game!</b>
     <b>Press square to see my portfolio</b>
     </div>
     </main>

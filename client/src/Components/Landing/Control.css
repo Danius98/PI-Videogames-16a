@@ -10,7 +10,8 @@
 }
 
 body{
-    background: url(../../img/Gaming_bg.png);
+    /*background: url(../../img/Gaming_bg.png);*/
+    background: aliceblue;
     font-family: Gamestation-CondensedOblique;
 }
 

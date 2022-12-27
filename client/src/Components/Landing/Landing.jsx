@@ -346,7 +346,7 @@ return (
 </svg> or Right cross  <svg class="right" width="32" height="26" viewBox="0 0 32 26" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path id="Right" d="M22.7188 1.17866C21.9188 1.27866 18.5188 1.77866 15.2188 2.07866C9.71875 2.67866 8.81875 3.17866 5.01875 7.27866C2.61875 9.77866 0.71875 12.2787 0.71875 12.8787C0.71875 13.3787 2.31875 15.7787 4.21875 18.1787C8.21875 22.9787 10.9187 24.0787 22.4188 25.1787C29.6187 25.7787 29.7188 25.7787 30.7188 23.1787C31.2188 21.6787 31.7188 16.9787 31.7188 12.7787C31.7188 2.07866 29.8188 -0.421337 22.7188 1.17866Z" fill="black" fill-opacity="0.85"/>
 </svg> for Github</b>
-    <b>Press cross <svg class="cross" width="35" height="35" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+<b>Press cross <svg class="cross" width="35" height="35" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g id="Cross">
 <path id="Vector" d="M13.0623 0.482378C1.66227 3.18238 -3.73774 17.2824 2.86226 26.9824C11.8623 40.0824 32.7623 34.9824 34.4623 19.1824C35.7623 7.48238 24.5623 -2.31762 13.0623 0.482378Z" fill="black" fill-opacity="0.85"/>
 <path id="x_x" d="M12.2734 6.86719L16.9023 14.5625L21.5898 6.86719H25.8281L18.9141 17.2969L26.043 28H21.8633L16.9805 20.0703L12.0977 28H7.89844L15.0078 17.2969L8.11328 6.86719H12.2734Z" fill="#E5E5E5"/>
@@ -354,8 +354,16 @@ return (
 </svg> or Down cross <svg class="down" width="26" height="32" viewBox="0 0 26 32" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path id="Down" d="M8.01883 4.17847C3.31883 8.07847 2.31883 10.7785 1.21883 22.2785C0.518832 29.4785 0.518832 29.5785 3.21883 30.5785C6.61883 31.8785 19.8188 31.8785 23.2188 30.5785C25.8188 29.5785 25.9188 29.2785 25.3188 24.2785C24.9188 21.4785 24.4188 16.7785 24.0188 14.0785C23.5188 9.77847 22.8188 8.47847 18.9188 4.77847C16.3188 2.47847 13.8188 0.578466 13.2188 0.578466C12.7188 0.578466 10.3188 2.17847 8.01883 4.17847Z" fill="black" fill-opacity="0.85"/>
 </svg>
-to skip to create your own game!</b>
-    <b>Press square to see my portfolio</b>
+to create your own game!</b>
+    <b>Press square <svg class="square" width="36" height="35" viewBox="0 0 36 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Square">
+<path id="Vector" d="M13.8183 0.578613C9.21828 1.67861 5.61828 4.47861 3.01828 9.17861C-3.48172 20.4786 4.91828 34.4786 18.2183 34.5786C24.0183 34.5786 28.2183 32.3786 32.0183 27.3786C41.6183 14.7786 29.4183 -3.12139 13.8183 0.578613Z" fill="black" fill-opacity="0.85"/>
+<rect id="Rectangle 78" x="7" y="6" width="22" height="23" fill="#E5E5E5"/>
+<rect id="Rectangle 78_2" x="10" y="9" width="16" height="17" fill="black" fill-opacity="0.85"/>
+</g>
+</svg> or Left cross <svg class="left" width="32" height="26" viewBox="0 0 32 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path id="Left" d="M2.71887 1.47842C0.818866 2.77842 0.0188658 18.6784 1.61887 22.9784L2.71887 25.8784L10.0189 25.1784C21.5189 24.0784 24.2189 22.9784 28.2189 18.1784C30.1189 15.7784 31.7189 13.4784 31.7189 12.9784C31.7189 12.4784 29.8189 9.97842 27.5189 7.47842C23.0189 2.57842 23.3189 2.67842 9.21887 1.07842C6.51887 0.778418 3.51887 0.978418 2.71887 1.47842Z" fill="black" fill-opacity="0.85"/>
+</svg> to see my portfolio</b>
     </div>
     </main>
 )

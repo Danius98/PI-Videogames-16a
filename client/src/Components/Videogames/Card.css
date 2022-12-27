@@ -1,13 +1,72 @@
-.card2 {
+.cardgame {
     text-decoration: none;
     display: flex;
     flex-direction: column;
-    width: 200px;
+    width: 400px;
     height: 160px;
     background: rgba(128, 128, 128, 0.877);
     border: 3px solid black;
     border-radius: 15px;
     margin: 1.98em;
+}
+
+.test{
+    background-color: blue;
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    height: 200px;
+    border-radius: 0 165px 0 40px;
+    position: relative;
+}
+
+.ola{
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.path{
+    stroke: none;
+    fill: aliceblue;
+}
+
+.wave{
+    height: 118px;
+    width: 75%;
+}
+
+.informacion{
+    display: flex;
+    align-items: center;
+    margin: auto 0;
+}
+
+.title{
+    background-color: yellow;
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    height: 20%;
+}
+
+.title_name{
+    margin: 0 auto;
+}
+
+.test_img{
+    height: 100px;
+    width: 100px;
+}
+
+.test_genres{
+    margin: 0 auto;
+}
+
+.cardgame__title{
+    background-color: yellow;
+    width: 80%;
 }
 
 .card2:hover {

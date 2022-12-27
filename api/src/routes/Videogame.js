@@ -5,16 +5,25 @@ const router = Router();
 const APIKEY = "f648fbbe7d024a9d9b021bbd24cea8b5"
 const GAMES = `https://api.rawg.io/api/games?key=${APIKEY}`
 //const GAMESID = `https://api.rawg.io/api/games/${id}?key=${APIKEY}`
+//const TEST = `https://api.rawg.io/api/games/${1}?key=${APIKEY}`
+//https://api.rawg.io/api/games?key=f648fbbe7d024a9d9b021bbd24cea8b5
+
 
 router.get('/', async function AllGames(req, res, next) {
     let VideogameAPI = [];
     const pages = [GAMES]
+    //console.ilog(pages)
     try {
         const { Titulo } = req.query
         for(let i = 0; i < 5; i++) {
+            /*    
+    fetch(game + `&page=${contador}`).then(res => res.json()).then(json => videogames.push(json.results))*/
         const response = await axios.get(`${pages[i]}`)
+        console.log(response)
         pages.push(response.data.next)
-        //console.log(response)
+        //console.log("cualquier ocsa");
+        //fetch(api).then(res => res.json()).then(data => data.next)
+        //console.log(response);
         const Game = response.data.results.map((e) => {
             let All_games = {
                 ID: e.id,
@@ -66,7 +75,25 @@ router.get('/', async function AllGames(req, res, next) {
     }
 })
 
-router.get('/Consolas', async function(_req, res) {
+/*router.get('/Hero', async function(_req, res){
+        let id = 1
+        const Hero = [`https://api.rawg.io/api/games/${id}?key=${APIKEY}`]
+        console.log(Hero)
+        try {
+            if(id < 4) {
+            for(let i = 0; i < 3; i++) {
+                const response = await axios.get(`${Hero[i]}`)
+                Hero.push(response)
+                console.log(response)
+            }
+        }
+            res.json("Cosa")
+        } catch(error) {
+        console.error("Nothing")
+        }
+})*/
+
+/*router.get('/Consolas', async function(_req, res) {
     try {
         const GameApi = await axios.get(GAMES);
         const result = GameApi.data.results;
@@ -86,7 +113,7 @@ router.get('/Consolas', async function(_req, res) {
     } catch(error) {
         res.send(error)
     }
-})
+})*/
 
 router.get('/:id', async function GamesID(req, res) {
     const { id } = req.params;
@@ -174,3 +201,31 @@ router.post('/', async function createGame (req, res) {
 })
 
 module.exports = router;
+
+/*
+function xbox(){
+       let response = fetch(game).then(res => res.json()).then(json => response = json)
+        return response
+    }
+contador = 2;
+next = respose //pagina que le sigue
+while(contador <= 5){
+    
+    fetch(game + `&page=${contador}`).then(res => res.json()).then(json => videogames.push(json.results))*/
+
+/*function xbox(){
+    let api = "https://api.rawg.io/api/games?key=f648fbbe7d024a9d9b021bbd24cea8b5"
+    let videogames = []
+    let pages = [api]
+       for(let i = 2; i <= 5; i++){
+    let response = fetch(api + `&page=${i}`).then(res => res.json()).then(json => pages.push(json))
+}
+    let video = response.json.results.map((e) => {
+        let All_games = {
+            ID: e.id
+        }
+        return All_games
+    })
+    videogames = videogames.concat(video)
+    return videogames
+    } */

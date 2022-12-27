@@ -1,0 +1,220 @@
+---------------- START FUNCTION --------------
+
+//let cat = window.json.next
+//fetch(cat).then(response => response.json()).then(data => console.log(data))
+/*function algo(){
+    let a = []
+    let contador = 1
+    while(contador <= 5){
+        fetch(cosa + `&page=${contador}`).then(res => res.json()).then(json => a.push(json))
+        contador++
+    }
+    return a
+}
+un*/
+
+--------------- TEST FUNCTIONS ------------------
+
+function xbox(){ 
+    let api = "https://api.rawg.io/api/games?key=f648fbbe7d024a9d9b021bbd24cea8b5"
+    let videogames = []
+    let pages = []
+    for(let i = 0; i < 5; i++){
+        fetch(api + `&page=${i}`).then(res => res.json()).then(json => pages.push(json))
+    }
+    return pages
+}
+
+function xbox(){ 
+    let api = "https://api.rawg.io/api/games?key=f648fbbe7d024a9d9b021bbd24cea8b5"
+    let videogames = []
+    let pages = []
+    for(let i = 1; i <= 5; i++){
+        let response = fetch(api + `&page=${i}`).then(res => res.json())
+        let respuesta = fetch(response).then(json => pages.push(json))
+        return respuesta
+    }
+}
+
+function xbox(){ 
+    let api = "https://api.rawg.io/api/games?key=f648fbbe7d024a9d9b021bbd24cea8b5"
+    let videogames = []
+    let pages = []
+    for(let i = 2; i <= 5; i++){
+        let response = fetch(api + `&page=${i}`).then(res => res.json())
+        let respuesta = response.then(json => pages.push(json))
+    }
+    return pages
+}
+
+.then(data => console.log(data))
+
+function xbox(){ 
+    let api = "https://api.rawg.io/api/games?key=f648fbbe7d024a9d9b021bbd24cea8b5"
+    let videogames = []
+    let pages = []
+    for(let i = 1; i <= 5; i++){
+        let response = fetch(api + `&page=${i}`).then(res => res.json())
+        let respuesta = response.then(json => pages.push(json)).catch(err => console.log(err))
+    }
+    return pages
+}
+
+function xbox(){ 
+    let api = "https://api.rawg.io/api/games?key=f648fbbe7d024a9d9b021bbd24cea8b5"
+    let videogames = []
+    let pages = []
+    for(let i = 1; i <= 5; i++){
+        let response = fetch(api + `&page=${i}`).then(res => res.json())
+        let respuesta = response.then(json => pages.push(json)).catch(err => console.log(err))
+        let game = response.then(data => console.log(data))
+        return game
+    }
+}
+
+//fetch(api).then(res => res.json()).then(data => data.next)
+
+function xbox(){
+    let api = "https://api.rawg.io/api/games?key=f648fbbe7d024a9d9b021bbd24cea8b5"
+    let videogames = []
+    let pages = [api]
+    for(let i = 2; i <= 5; i++){
+        let response = fetch(api + `&page=${i}`).then(res => res.json()).then(data => data)
+        pages.push(response.next)
+    }
+    return pages
+}
+
+-------------------------------
+function equal to allgames
+
+function xbox(){
+    let page = []
+for(let i = 1; i <= 5; i++){
+    let response = fetch(cat + `&page=${i}`)
+    page.push(response)
+}
+return page
+}
+
+let response = fetch(cat).then(res => res.json()).then(data => data.results.map((e) => {
+    let allgames = {
+        ID: e.id
+    }
+    return allgames
+}))
+
+---------------------- COMPLETO ---------------
+function xbox(){
+    let games = "https://api.rawg.io/api/games?key=f648fbbe7d024a9d9b021bbd24cea8b5"
+    let pages = []
+    let videogames = []
+    let juegos;
+    for(let i = 1; i <= 5; i++){
+        let response = fetch(games + `&page=${i}`)
+        pages.push(response.then(res => res.json()).then(data => data.next).catch(err => console.log(err)))
+    }
+    return pages
+}
+
+
+function xbox(){
+    let games = "https://api.rawg.io/api/games?key=f648fbbe7d024a9d9b021bbd24cea8b5"
+    let pages = []
+    let videogames = []
+    for(let i = 1; i <= 5; i++){
+        let response = fetch(games + `&page=${i}`)
+        pages.push(response)
+        let game = response.then(res => res.json()).then(data => data.results.map((e) => {
+            let allgames = {
+                ID: e.id
+            }
+            return allgames
+        }))
+        videogames = videogames.concat(game)
+    }
+    return videogames
+}
+
+function xbox(){
+    let games = "https://api.rawg.io/api/games?key=f648fbbe7d024a9d9b021bbd24cea8b5"
+    let pages = []
+    let videogames = []
+    let juegos;
+    for(let i = 1; i <= 5; i++){
+        let response = fetch(games + `&page=${i}`)
+        pages.push(response)
+        let game = response.then(res => res.json()).then(data => data.results.map((e) => {
+            let allgames = {
+                ID: e.id
+            }
+            return allgames
+        }))
+        videogames = videogames.concat(game)
+        juegos = Promise.all(videogames)
+    }
+    return juegos
+}
+
+////////////////////// EXPECTED AS FETCH //////////
+
+function xbox(){
+    let games = "https://api.rawg.io/api/games?key=f648fbbe7d024a9d9b021bbd24cea8b5"
+    let pages = []
+    let videogames = []
+    let play
+    for(let i = 1; i <= 5; i++){
+        let response = fetch(games + `&page=${i}`)
+        pages.push(response)
+        let game = response.then(res => res.json()).then(data => data.results.map((e) => {
+            let allgames = {
+                ID: e.id,
+                Titulo: e.name,
+                Imagen: e.background_image,
+                Lanzamiento: e.released,
+                Rating: e.rating,
+                Generos: e.genres.map((e) => {
+                    return{
+                        Genero: e.name,
+                    }
+                })
+            }
+            return allgames
+        }))
+        videogames = videogames.concat(game)
+        play = Promise.all(videogames.flat()).then(results => results.flat());
+    }
+    return play
+}
+
+Optimized
+
+function xbox(){
+    const baseUrl = "https://api.rawg.io/api/games?key=f648fbbe7d024a9d9b021bbd24cea8b5";
+    return Promise.all(Array.from(
+        { length: 5 },
+        (_, i) => fetch(baseUrl + '&page=' + (i + 1))
+          .then(res => res.json())
+          .then(data => data.results.map(({ id }) => ({ ID: id })))
+    ))
+      .then(results => results.flat());
+}
+xbox().then(console.log);
+
+Optimized 2
+
+function xbox() {
+  let games = "https://api.rawg.io/api/games?key=f648fbbe7d024a9d9b021bbd24cea8b5"
+  return Promise.all(Array.from({
+    length: 5
+  }, (a, i) => i + 1).map(v => {
+    return fetch(games + `&page=${v}`).then(res => res.json()).then(data => data.results.map((e) => {
+      let allgames = {
+        ID: e.id
+      }
+      return allgames
+    }))
+  }))
+}
+
+xbox().then(d => console.log(d.flat(1)))

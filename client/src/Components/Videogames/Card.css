@@ -1,13 +1,22 @@
+/*
+OXFORD BLUE 0B132B
+SPACE CADET 1C2541
+YINMIN BLUE 3A506B
+VERDIGRIS 5BC0BE
+FLUROESCENT CYAN 6FFFE9
+*/
+
 .cardgame {
     text-decoration: none;
     display: flex;
     flex-direction: column;
     width: 400px;
-    height: 160px;
-    background: rgba(128, 128, 128, 0.877);
+    height: 200px;
+    background: rgba(58, 80, 107);
     border: 3px solid black;
-    border-radius: 15px;
-    margin: 1.98em;
+    border-radius: 0 165px 0 40px;
+    margin: 1em;
+    position: relative;
 }
 
 .test{
@@ -18,6 +27,8 @@
     height: 200px;
     border-radius: 0 165px 0 40px;
     position: relative;
+    border: 3px solid red;
+    border-top: 0;
 }
 
 .ola{
@@ -53,6 +64,7 @@
 
 .title_name{
     margin: 0 auto;
+    text-decoration: none;
 }
 
 .test_img{
@@ -66,7 +78,10 @@
 
 .cardgame__title{
     background-color: yellow;
+    display: flex;
+    flex-direction: row;
     width: 80%;
+    height: 20%;
 }
 
 .card2:hover {

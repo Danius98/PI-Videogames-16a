@@ -7,14 +7,14 @@ FLUROESCENT CYAN 6FFFE9
 */
 
 .cardgame {
-    text-decoration: none;
     display: flex;
     flex-direction: column;
     width: 400px;
     height: 200px;
     background: rgba(58, 80, 107);
-    border: 3px solid black;
-    border-radius: 0 165px 0 40px;
+    border: 2px solid black;
+    border-radius: 0 125px 0 40px;
+    border-top: 0;
     margin: 1em;
     position: relative;
 }
@@ -35,7 +35,9 @@ FLUROESCENT CYAN 6FFFE9
     overflow: hidden;
     position: absolute;
     top: 0;
-    right: 0;
+    right: -25px;
+    right: -1;
+    height: 20%;
 }
 
 .path{
@@ -44,8 +46,7 @@ FLUROESCENT CYAN 6FFFE9
 }
 
 .wave{
-    height: 118px;
-    width: 75%;
+    height: 120px;
 }
 
 .informacion{
@@ -67,6 +68,10 @@ FLUROESCENT CYAN 6FFFE9
     text-decoration: none;
 }
 
+a:link{
+    text-decoration: none! important;
+}
+
 .test_img{
     height: 100px;
     width: 100px;
@@ -80,7 +85,7 @@ FLUROESCENT CYAN 6FFFE9
     background-color: yellow;
     display: flex;
     flex-direction: row;
-    width: 80%;
+    width: 90%;
     height: 20%;
 }
 
@@ -95,8 +100,15 @@ FLUROESCENT CYAN 6FFFE9
 }
 
 .align {
-    font-size: 15px;
+    display: flex;
     align-items: center;
+    height: 80%;
+}
+
+.image{
+    height: 100%;
+    width: 50%;
+    border-radius: 0 0 0 40px;
 }
 
 .list-item {

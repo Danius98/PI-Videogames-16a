@@ -87,6 +87,13 @@ a:link{
     flex-direction: row;
     width: 90%;
     height: 20%;
+    font-size: 20px;
+}
+
+.genre_name{
+    font-size: 20px;
+    margin: auto;
+    color: aliceblue;
 }
 
 .card2:hover {

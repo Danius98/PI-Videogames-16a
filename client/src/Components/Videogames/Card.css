@@ -11,10 +11,11 @@ FLUROESCENT CYAN 6FFFE9
     flex-direction: column;
     width: 400px;
     height: 200px;
-    background: rgba(58, 80, 107);
-    border: 2px solid black;
+    background: #0B132B;
+    border: 2px solid #6fffe9;
     border-radius: 0 125px 0 40px;
     border-top: 0;
+    border-left: 0;
     margin: 1em;
     position: relative;
 }
@@ -55,19 +56,6 @@ FLUROESCENT CYAN 6FFFE9
     margin: auto 0;
 }
 
-.title{
-    background-color: yellow;
-    display: flex;
-    flex-direction: row;
-    width: 80%;
-    height: 20%;
-}
-
-.title_name{
-    margin: 0 auto;
-    text-decoration: none;
-}
-
 a:link{
     text-decoration: none! important;
 }
@@ -82,18 +70,20 @@ a:link{
 }
 
 .cardgame__title{
-    background-color: yellow;
     display: flex;
     flex-direction: row;
     width: 90%;
     height: 20%;
-    font-size: 20px;
+    align-items: center;
+    background-color: #6FFFE9;
+    border: 1px solid #0B132B;
+    border-bottom: 0;
 }
 
 .genre_name{
     font-size: 20px;
     margin: auto;
-    color: aliceblue;
+    color: #6FFFE9;
 }
 
 .card2:hover {
@@ -102,8 +92,32 @@ a:link{
 }
 
 .name {
-    color: rgb(90, 83, 83);
-    text-decoration: none;
+    margin-left: 0.5rem;
+    color: #1C2541;
+}
+
+.s{
+    font-size: 38px;
+}
+
+.m{
+    font-size: 25px;
+}
+
+.l{
+    font-size: 21px;
+}
+
+.xl{
+    font-size: 18px;
+}
+
+.xxl{
+    font-size: 15px;
+}
+
+.font{
+    font-size: 22px;
 }
 
 .align {
@@ -124,33 +138,4 @@ a:link{
     height: 100%;
     width: auto;
     align-items: center;
-}
-
-.h32 {
-    font-size: 15px;
-    align-items: center;
-}
-
-.temperature {
-    display: flex;
-    background: rgb(167, 167, 228);
-    border-radius: 15px;
-    justify-content: space-around;
-    align-items: center;
-}
-
-.btn {
-    background: red;
-    border-radius: 10px;
-    width: 30px;
-    align-self: flex-end;
-}
-
-.btnwhite {
-    color: white;
-}
-
-.btn:hover {
-    background-color: gray;
-    border-radius: 10px;
 }

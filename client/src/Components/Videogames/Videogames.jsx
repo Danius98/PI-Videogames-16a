@@ -30,7 +30,7 @@ export default function Videogames() {
     }, [videogames]);
 console.log(videogames)
     const Filtred_Videogame = videogames.slice(currentPage, currentPage + 15);
-    console.log(videogames.Generos)
+    //console.log(videogames.Generos)
     return (
         <div>
             {Filtred_Videogame.length >= 15 ? (

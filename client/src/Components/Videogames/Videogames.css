@@ -14,10 +14,12 @@
     padding: 0.35em 1.2em;
     border-radius: 1em;
     font-size: larger;
-    color: rgb(14, 13, 13)
+    color: #6FFFE9;
+    background: #1C2541;
 }
 
 .button:hover {
-    color: rgb(252, 249, 249);
-    background-color: #706e6e;
+    color: #1C2541;
+    background-color: #6FFFE9;
+    cursor: pointer;
 }

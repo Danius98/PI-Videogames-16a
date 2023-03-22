@@ -10,11 +10,9 @@ export default function Home() {
         dispatch(getVideoGame());
     }, [dispatch])
     return (
-        <div>
+        <section>
             <NavBar/>
-            <div>
-                {<Videogames/>}
-            </div>/
-        </div>
+                <Videogames/>
+        </section>
     )
 }

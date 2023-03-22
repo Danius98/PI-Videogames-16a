@@ -34,14 +34,14 @@ console.log(videogames)
     return (
         <div>
             {Filtred_Videogame.length >= 15 ? (
-                <div>
+                <section>
             <button className="button" onClick={first_Page}> {"<<"}</button>
             <button className="button" onClick={prev_Page}> {"<"}</button>
             <button className="button" onClick={next_Page}> {">"}</button>
             <button className="button" onClick={last_Page}> {">>"}</button>
-            </div>
+            </section>
             ): null}
-            <div className="grid">
+            <section className="grid">
             {Filtred_Videogame.map((e)  => (
             <GameCard
             ID = {e.ID}
@@ -50,7 +50,7 @@ console.log(videogames)
             Generos = {e.Generos}
             />
             ))}
-          </div>
+          </section>
         </div>
     )
 }

@@ -5,7 +5,7 @@ import Landing from "./Components/Landing/Landing";
 import Home from "./Components/Home";
 import GamesDetail from "./Components/GamesDetail/GamesDetail"
 import Games from "./Components/CreateGames/Games"
-import Test from "./Components/Videogames/Test"
+import PaginationComponent from "./Components/Videogames/Pagination"
 
 function App() {
   return (
@@ -14,7 +14,7 @@ function App() {
       <Route exact path="/Videogame" component={Home}/>
       <Route path="/Videogame/:idCosa" component={GamesDetail}/>
       <Route path="/Videogame/Create" component={Games}/>
-      <Route path="/test" component={Test}/>
+      <Route path="/Pagination" component={PaginationComponent}/>
     </div>
   );
 }

@@ -9,20 +9,20 @@
     cursor: pointer;
 }
 
-.pageNumbers li.active{
+/*.pageNumbers li.active{
     background-color: black;
     color: white;
-}
+}*/
 
-.pageNumbers li button{
+/*.pageNumbers li button{
     background-color: transparent;
     border: none;
     color: black;
     font-size: 1.5rem;
     cursor: pointer;
-}
+}*/
 
-.pageNumbers li button:hover{
+/*.pageNumbers li button:hover{
     background-color: black;
     color: white;
 }
@@ -38,4 +38,4 @@
     font-size: 1.2rem;
     border: 1px solid black;
     cursor: pointer;
-}
+}*/

@@ -61,7 +61,7 @@ export default function PaginationComponent(){
         }
     })
 
-    console.log(renderPageNumbers) //hace que renderice correctamente entre la página menor y mayor en la paginacuón (def 1 - 5)
+    console.log(renderPageNumbers) //hace que renderice correctamente entre la página menor y mayor en la paginacuón (def 1 - 5). añade el atributo active cuando se está en la página actual
     const handleNextBtn = () => {
         setCurrentPage(currentPage + 1);
 

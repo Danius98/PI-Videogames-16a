@@ -1,0 +1,62 @@
+.container {
+    display: flex;
+    justify-content: space-around;
+}
+.grid {
+    display: flex;
+    justify-content: space-arounds;
+    flex-wrap: wrap;
+    text-decoration: none;
+}
+
+.pagination {
+    display: inline-block;
+    padding: 0.35em 1.2em;
+    border-radius: 1em;
+    font-size: larger;
+    color: #6FFFE9;
+    background: #1C2541;
+}
+
+.pageNumbers{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+.pageNumbers li{
+    display: inline-block;
+    padding: 0.35em 1.2em;
+    border-radius: 1em;
+    font-size: larger;
+    color: #6FFFE9;
+    background: #1C2541;
+    cursor: pointer;
+}
+
+.pageNumbers li.active{
+    background: #6FFFE9;
+    color: #1C2541;
+}
+
+.pageNumbers li.arrow{
+    color: #6FFFE9;
+    background: #1C2541;
+}
+
+.pageNumbers li.arrow:hover{
+    background: #6FFFE9;
+    color: #1C2541;
+}
+
+.pageNumbers li button{
+    background-color: transparent;
+    border: none;
+    color: #6FFFE9;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.pageNumbers li button:hover{
+    outline: none;
+}

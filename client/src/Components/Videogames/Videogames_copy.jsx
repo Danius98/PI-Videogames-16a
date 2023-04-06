@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import GameCard from './Card.jsx';
 import { useSelector } from 'react-redux';
-import "./Videogames.css"
+import "./Videogames_copy.css"
 
 export default function Videogames() {
     const videogames = useSelector((state) => state.Videogames)
@@ -28,9 +28,11 @@ export default function Videogames() {
     const renderPageNumbers = pages.map(number=>{
         if(number < maxPageNumberLimit + 1 && number > minPageNumberLimit){
             return(
-                <li key={number}
+                <li
+                key={number}
                 id={number}
-                onClick={currentPage == number ? "active" : null}
+                onClick={handleClick}
+                className={currentPage == number ? "active" : null}
                 >
                     {number}
                 </li>
@@ -75,25 +77,28 @@ console.log(videogames)
     //console.log(videogames.Generos)
     return (
         <div>
+            {videogames.length >= 1? (            
             <ul className="pageNumbers">
-                <li>
+                <li className='arrow'>
                     <button
                         onClick={handlePrevBtn}
                         disabled={currentPage === pages[0] ? true : false}
-                    >Prev
+                    >{"<"}
                     </button>
                 </li>
                 {pageDecrementBtn}
                 {renderPageNumbers}
                 {pageIncrementBtn}
-                <li>
+                <li className='arrow'>
                 <button
                 onClick={handleNextBtn}
                 disabled={currentPage == pages[pages.length - 1] ? true : false}
                 //hace que no se pueda usar el botón next si la página dónde se está es la ultima
-                >Next</button>
+                >{">"}</button>
             </li>
             </ul>
+            ): null}
+            <section className="grid">
             {currentItems.map((e)  => (
             <GameCard
             ID = {e.ID}
@@ -102,6 +107,7 @@ console.log(videogames)
             Generos = {e.Generos}
             />
             ))}
+            </section>
         </div>
     )
 }

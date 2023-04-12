@@ -12,6 +12,9 @@ export default function Videogames() {
     const [maxPageNumberLimit, setMaxPageNumberLimit] = useState(5);
     const [minPageNumberLimit, setMinPageNumberLimit] = useState(0);
 
+    const [isActivePrev, setIsActivePrev] = useState(false);
+    const [isActiveNext, setIsActiveNext] = useState(false);
+
     const handleClick = (event) => {
         setCurrentPage(Number(event.target.id))
     }
@@ -42,8 +45,24 @@ export default function Videogames() {
         }
     })
 
+    const handleFirstPage = () => {
+        setCurrentPage(1)
+        setMinPageNumberLimit(0)
+        setMaxPageNumberLimit(5)
+    }
+
+    const handleLastPage = () => {
+        setCurrentPage(pages[pages.length - 1])
+        setMinPageNumberLimit(pages[pages.length - 6])
+        setMaxPageNumberLimit(pages[pages.length - 1])
+    }
+
     const handleNextBtn = () => {
         setCurrentPage(currentPage + 1);
+        setIsActiveNext(true);
+        setTimeout(() => {
+            setIsActiveNext(false)
+        }, 250)
 
         if(currentPage + 1 > maxPageNumberLimit){
             setMaxPageNumberLimit(maxPageNumberLimit + pageNumberLimit);
@@ -53,6 +72,10 @@ export default function Videogames() {
 
     const handlePrevBtn = () => {
         setCurrentPage(currentPage - 1);
+        setIsActivePrev(true);
+        setTimeout(() => {
+            setIsActivePrev(false)
+        }, 250)
 
         if((currentPage - 1) % pageNumberLimit == 0){
             setMaxPageNumberLimit(maxPageNumberLimit - pageNumberLimit);
@@ -62,12 +85,12 @@ export default function Videogames() {
 
     let pageIncrementBtn = null;
     if(pages.length > maxPageNumberLimit){
-        pageIncrementBtn = <li onClick={handleNextBtn}> &hellip;</li>
+        pageIncrementBtn = <li> &hellip;</li>
     }
 
     let pageDecrementBtn = null;
     if(minPageNumberLimit >= 1){
-        pageDecrementBtn = <li onClick={handlePrevBtn}> &hellip;</li>
+        pageDecrementBtn = <li> &hellip;</li>
     }
     
     useEffect(() => {
@@ -79,23 +102,37 @@ console.log(videogames)
         <div>
             {videogames.length >= 1? (            
             <ul className="pageNumbers">
-                <li className='arrow'>
+                    {currentPage != pages[0]?(
+                    <>
                     <button
-                        onClick={handlePrevBtn}
-                        disabled={currentPage === pages[0] ? true : false}
+                    onClick={handleFirstPage}
+                    disabled={currentPage === pages[0] ? true : false}
+                    >{"<<"}
+                    </button>
+                <button 
+                    className={isActivePrev ? "pageNumbers__prevArrow" : null}
+                    onClick={handlePrevBtn}
+                    disabled={currentPage === pages[0] ? true : false}
                     >{"<"}
                     </button>
-                </li>
+                    </>
+                    ): null}
                 {pageDecrementBtn}
                 {renderPageNumbers}
-                {pageIncrementBtn}
-                <li className='arrow'>
-                <button
-                onClick={handleNextBtn}
-                disabled={currentPage == pages[pages.length - 1] ? true : false}
-                //hace que no se pueda usar el botón next si la página dónde se está es la ultima
+                {pageIncrementBtn} 
+                    {currentPage != pages[pages.length - 1]?(
+                    <>
+                    <button
+                    className={isActiveNext ? "pageNumbers__nextArrow" : null}
+                    onClick={handleNextBtn}
+                    disabled={currentPage == pages[pages.length - 1] ? true : false}
                 >{">"}</button>
-            </li>
+                <button
+                    onClick={handleLastPage}
+                    disabled={currentPage == pages[pages.length - 1] ? true : false}
+                >{">>"}</button>
+                </>
+            ): null}
             </ul>
             ): null}
             <section className="grid">

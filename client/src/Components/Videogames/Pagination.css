@@ -1,4 +1,4 @@
-.pageNumbers{
+/*.pageNumbers{
     list-style: none;
     display: flex;
 }
@@ -7,7 +7,7 @@
     padding:  10px;
     border: 1px solid black;
     cursor: pointer;
-}
+}*/
 
 /*.pageNumbers li.active{
     background-color: black;

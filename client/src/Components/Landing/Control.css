@@ -127,7 +127,7 @@ body{
 
 .svg:hover #Vector_8{
     animation: outer 2s 1s infinite forwards;
-    animation: name duration timing-function delay iteration-count direction fill-mode;
+    /*animation: name duration timing-function delay iteration-count direction fill-mode;*/
 }
 
 

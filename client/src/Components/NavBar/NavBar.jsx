@@ -38,7 +38,7 @@ const NavBar = ({getVideoGame, Name_OrderA, Name_OrderZ, Genre, Created, Game_Rt
         <header className="navbar">
             <div className="list">
                 <Link className="landinglink" to="/">
-                    <p>Bienvenidos</p>
+                    <p>Benvenidos</p>
                 </Link>
                 <div className="list-item">
                     <h5 className="order">Ordenado Según:</h5>

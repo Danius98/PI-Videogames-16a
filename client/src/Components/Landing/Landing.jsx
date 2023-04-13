@@ -6,9 +6,6 @@ import './Control.css';
 export default function Landing() {
 return (
     <main className="landing">
-      {/*<button className="card">
-             <Link className="Zelda" to="/Videogame"><h1>Bienvenido, ¡Suerte en tu Juego!</h1></Link>
-</button>*/}
       <div class="control">
       <svg class="svg" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
         <g id="PS4">

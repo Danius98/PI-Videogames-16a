@@ -26,23 +26,21 @@
 
 .pageNumbers li, ul button{
     display: inline-block;
-    padding:  10px;
+    padding:  20px;
     border-radius: 1em;
     border: none;
     font-size: larger;
     color: #6FFFE9;
     background: #1C2541;
     cursor: pointer;
+    border: 2px solid #6FFFE9;
+    margin: 1px;
 }
 
 .pageNumbers li.active{
     background: #6FFFE9;
     color: #1C2541;
-}
-
-.ul button:target{
-    color: #1C2541;
-    background: green
+    border: 2px solid #1C2541;
 }
 
 .pageNumbers__prevArrow{
@@ -57,11 +55,13 @@
     0%{
         background: #6FFFE9;
         color: #1C2541;
+        border: 2px solid #1C2541;
     }
 
     50%{
-        background: #1C2541;
-        color: #6FFFE9;
+        background: #6FFFE9;
+        color: #1C2541;
+        border: 2px solid #1C2541;
     }
 
     100%{
@@ -76,8 +76,9 @@
     }
 
     50%{
-        background: #1C2541;
-        color: #6FFFE9;
+        background: #6FFFE9;
+        color: #1C2541;
+        border: 2px solid #1C2541;
     }
 
     100%{

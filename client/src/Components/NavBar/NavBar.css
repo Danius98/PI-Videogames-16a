@@ -78,23 +78,26 @@
     align-items: baseline;
 }
 
-.link:hover {
+a.landeinglink:hover {
     background-color: rgb(194, 182, 182);
     color: white(255, 255, 255, 0);
     transition: 0.7s;
+    fill: red;
+}
+
+a.landinglink{
+    width: 50px;
+    height: 50px;
+    fill: red;
 }
 
 .landinglink {
     text-decoration: none;
     background-size: cover;
-    background-image: url('./Landing.jpg');
-    color: rgb(190, 188, 197)
 }
 
 .landinglink:hover {
-    background-color: rgb(223, 198, 198);
-    border: 1px #111010 solid;
-    color: rgba(255, 255, 255, 0)
+    fill: red;
 }
 
 .btnact {

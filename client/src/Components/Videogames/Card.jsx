@@ -24,7 +24,9 @@ export default function GameCard(props) {
             <div className="align">
             <Link to={`/Videogame/${ID}`}>
            <img class="image" src={Imagen} alt="No imagen"/>
+            {Generos.length >= 40?(
               <h1 class="genre_name">{Generos?.map((e) => e.Genero).join(`\n`)}</h1>
+              ): <h1 class="genre_name l">{Generos?.map((e) => e.Genero).join(`\n`)}</h1>}
               </Link>
            </div>
         </div>

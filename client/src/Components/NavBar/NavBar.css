@@ -1,9 +1,9 @@
 .navbar {
-    height: 56px;
+    height: 70px;
     width: 100%;
     top: 0;
     left: 0;
-    background-color: #303236;
+    background-color: #3A506B;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -78,26 +78,32 @@
     align-items: baseline;
 }
 
-a.landeinglink:hover {
-    background-color: rgb(194, 182, 182);
-    color: white(255, 255, 255, 0);
-    transition: 0.7s;
-    fill: red;
-}
-
-a.landinglink{
-    width: 50px;
-    height: 50px;
-    fill: red;
-}
-
-.landinglink {
+a.landingLink{
     text-decoration: none;
     background-size: cover;
+    display: flex;
+    flex-direction: column;
+    width: 50px;
+    height: 100%;
+    text-decoration: none! important;
 }
 
-.landinglink:hover {
-    fill: red;
+.landingLink__icon{
+    width: 50px;
+    height: 50px;
+    fill: #6FFFE9;
+}
+
+.landingLink__text{
+    color: #6FFFE9;
+}
+
+.landingLink:hover .landingLink__icon{
+    fill: #1C2541;
+}
+
+.landingLink:hover .landingLink__text{
+    color: #1C2541;
 }
 
 .btnact {

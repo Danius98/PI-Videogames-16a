@@ -42,8 +42,8 @@ const NavBar = ({getVideoGame, Name_OrderA, Name_OrderZ, Genre, Created, Game_Rt
                 <p className='landingLink__text'>Home</p>
                 </Link>
                 <div className="list-item">
-                    <h5 className="order">Ordenado Según:</h5>
-                    <select onChange={(event) => setOrder(event.target.value)}>
+                    <h5 className="order__text">Ordenado Según:</h5>
+                    <select className="order__filter" onChange={(event) => setOrder(event.target.value)}>
                         <option value="Todos">Todos</option>
                         <option value="A-Z">Alfabético A-Z</option>
                         <option value="Z-A">Alfabético Z-A</option>
@@ -53,9 +53,9 @@ const NavBar = ({getVideoGame, Name_OrderA, Name_OrderZ, Genre, Created, Game_Rt
                     <Buscador/>
                 </div>
                 <div className="continent">
-                    <h5>Filtrado por Creado</h5>
+                    <h5 className="order__text">Filtrado por Creado</h5>
                     <div>
-                        <select onChange={(event) => setCreado(event.target.value)}>
+                        <select className="order__filter" onChange={(event) => setCreado(event.target.value)}>
                         <option value="Todo">Todos</option>
                           <option value="false">Existente</option>
                           <option value="true">Creado</option>
@@ -63,9 +63,9 @@ const NavBar = ({getVideoGame, Name_OrderA, Name_OrderZ, Genre, Created, Game_Rt
                     </div>
                 </div>
                 <div className="continent">
-                    <h5>Filtrado por Tipo</h5>
+                    <h5 className="order__text">Filtrado por Tipo</h5>
                     <div>
-                        <select onChange={(event) => setGenre(event.target.value)}>
+                        <select className="order__filter" onChange={(event) => setGenre(event.target.value)}>
                           <option value="allGenre">Todos</option>
                           <option value="Action">Action</option>
                           <option value="RPG">RPG</option>

@@ -29,7 +29,7 @@ export default function Videogames() {
     const currentItems = videogames.slice(indexOfFirstItem, indexOfLastItem);
 
     const renderPageNumbers = pages.map(number=>{
-        if(number < maxPageNumberLimit + 1 && number > minPageNumberLimit){
+        if(number < maxPageNumberLimit + 1 && number > minPageNumberLimit && pages.length != 1){
             return(
                 <li
                 key={number}

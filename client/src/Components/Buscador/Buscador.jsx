@@ -11,6 +11,7 @@ export default function Buscador() {
     };
     const onClickHandler = () => {
         dispatch(getVideoGameName(input));
+        console.log(input)
     };
     const HomeHandler = () => {
         dispatch(getVideoGame());

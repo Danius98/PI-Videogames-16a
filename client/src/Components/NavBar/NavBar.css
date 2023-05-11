@@ -20,6 +20,10 @@
     align-items: center;
 }
 
+.newGame{
+    flex-direction: column;
+}
+
 .list {
     margin: 0;
     padding: 0;
@@ -55,6 +59,7 @@
     display: flex;
     margin-left: 1em;
     align-items: center;
+    flex-direction: column;
 }
 
 .activity {
@@ -69,16 +74,7 @@
     padding: 2%
 }
 
-.link {
-    color: black;
-    background-size: 100%;
-    padding-left: 0.2%;
-    padding-right: 0.2%;
-    border-radius: 5%;
-    align-items: baseline;
-}
-
-a.landingLink{
+.landingLink, .newGameLink{
     text-decoration: none;
     background-size: cover;
     display: flex;
@@ -88,27 +84,47 @@ a.landingLink{
     text-decoration: none! important;
 }
 
-.landingLink__icon{
+.landingLink__icon, .newGameLink__icon{
     width: 50px;
     height: 50px;
     fill: #6FFFE9;
 }
 
-.landingLink__text{
+.landingLink__text, .newGameLink__text{
     color: #6FFFE9;
 }
 
-.landingLink:hover .landingLink__icon{
+.landingLink:hover .landingLink__icon, .newGameLink:hover .newGameLink__icon{
     fill: #1C2541;
 }
 
-.landingLink:hover .landingLink__text{
+.landingLink:hover .landingLink__text, .newGameLink:hover .newGameLink__text{
     color: #1C2541;
 }
 
 .order__text{
     color: #6FFFE9;
 }
+
+/*select{
+    / A reset of styles, including removing the default dropdown arrow
+    appearance: none;
+    // Additional resets for further consistency
+    background-color: transparent;
+    border: none;
+    padding: 0 1em 0 0;
+    margin: 0;
+    width: 100%;
+    font-family: inherit;
+    font-size: inherit;
+    cursor: inherit;
+    line-height: inherit;
+  }
+*/
+
+/*select:hover{
+    background-color: yellow;
+}*/
 
 .order__filter{
     color: #6FFFE9;
@@ -117,11 +133,13 @@ a.landingLink{
     border-radius: 10px;
     text-align: center;
     font-family: inherit;
+    width: 110px;
+    margin-top: 5px;
 }
 
-.order__filter option:hover{
-    background-color: #6FFFE9;
-}
+/*select::-ms-expand {
+    display: none;
+  }*/
 
 
 .btnact {

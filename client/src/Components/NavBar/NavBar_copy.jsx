@@ -33,7 +33,6 @@ const NavBar = ({getVideoGame, Name_OrderA, Name_OrderZ, Genre, Created, Game_Rt
         else if(Order === "Mayor Rating") Game_Rtn_Max();
         else if(Order === "Menor Rating") Game_Rtn_Min();
     }, [Order, setOrder])
-    console.log(Genero)
     return (
         <header className="navbar">
                 <div className='order'>
@@ -46,7 +45,9 @@ const NavBar = ({getVideoGame, Name_OrderA, Name_OrderZ, Genre, Created, Game_Rt
                 <div className='order'>
                 <div className="continent">
                     <h5 className="order__text">Ordenado Según:</h5>
-                    <select className="order__filter" onChange={(event) => setOrder(event.target.value)}>
+                    <select className="order__filter"
+                        onChange={(event) => setOrder(event.target.value)}
+                        >
                         <option value="Defecto">Defecto</option>
                         <option value="A-Z">Alfabético A-Z</option>
                         <option value="Z-A">Alfabético Z-A</option>
@@ -65,7 +66,7 @@ const NavBar = ({getVideoGame, Name_OrderA, Name_OrderZ, Genre, Created, Game_Rt
                     </div>
                 </div>
                 <div className="continent">
-                    <h5 className="order__text">Filtrado por Tipo</h5>
+                    <h5 className="order__text">Filtrado por Género</h5>
                         <select className="order__filter" onChange={(event) => setGenre(event.target.value)}>
                           <option value="allGenre">Todos los géneros</option>
                           <option value="Action">Action</option>
@@ -89,9 +90,12 @@ const NavBar = ({getVideoGame, Name_OrderA, Name_OrderZ, Genre, Created, Game_Rt
                           <option value="Card">Card</option>
                         </select>
                 </div>
-                <Link className="link" to="/Videogame/Create">
-                            <h5>Crea un Videojuego</h5>
-                        </Link>
+                <div className='order newGame'>
+                    <Link className="newGameLink" to="/Videogame/Create">
+                        <svg className="newGameLink__icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M13 7h-2v4H7v2h4v4h2v-4h4v-2h-4z"/><path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm0 18c-4.411 0-8-3.589-8-8s3.589-8 8-8 8 3.589 8 8-3.589 8-8 8z"/></svg>
+                        <p className='newGameLink__text'>¡Crea tu videojuego!</p>
+                    </Link>
+                </div>
                 </div>
         </header>
     )

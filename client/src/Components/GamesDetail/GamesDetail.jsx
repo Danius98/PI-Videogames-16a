@@ -20,7 +20,7 @@ export default function GameID() {
             <button className="buton">
                 <Link className="link"to="/Videogame">Home</Link>
             </button>
-            <div className="container">
+            <div className="container2">
               <h1>{GameDetailed.Titulo}</h1>
               <div className="imgcontainer">
                   <img src={GameDetailed.Imagen} alt="No se encontró el Videojuego"/>

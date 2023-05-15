@@ -74,7 +74,7 @@
     padding: 2%
 }
 
-.landingLink, .newGameLink{
+a.landingLink, a.newGameLink{
     text-decoration: none;
     background-size: cover;
     display: flex;

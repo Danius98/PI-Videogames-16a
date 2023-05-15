@@ -1,7 +1,9 @@
 .container {
-    background-color: darkgray;
-    display: flex;
-    justify-content: center;
+    background-color: #4d4a4a;
+    color: rgb(238, 226, 226);
+    box-shadow: black;
+    border-radius: 2rem;
+    height: 40px;
 }
 
 .btnSearch {
@@ -14,7 +16,6 @@
     background-color: gray;
     border: 1px black;
     border-radius: 2em;
-    margin-left: 20px;
 }
 
 .btnSearch:hover {
@@ -24,7 +25,9 @@
 
 .inputtext {
     border-radius: 60px;
-    margin: 6px;
+    margin: auto 0px;
     background-color: rgb(223, 203, 203);
-    margin-left: 15px
+    margin-left: 15px;
+    font-family: inherit;
+    width: 80%;
 }

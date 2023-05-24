@@ -92,7 +92,7 @@ const NavBar = ({getVideoGame, Name_OrderA, Name_OrderZ, Genre, Created, Game_Rt
                 </div>
                 <div className='order newGame'>
                     <Link className="newGameLink" to="/Videogame/Create">
-                        <svg className="newGameLink__icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M13 7h-2v4H7v2h4v4h2v-4h4v-2h-4z"/><path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm0 18c-4.411 0-8-3.589-8-8s3.589-8 8-8 8 3.589 8 8-3.589 8-8 8z"/></svg>
+                        <svg className="newGameLink__icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M19 11h-6V5h-2v6H5v2h6v6h2v-6h6z"/></svg>
                         <p className='newGameLink__text'>¡Crea tu juego!</p>
                     </Link>
                 </div>
